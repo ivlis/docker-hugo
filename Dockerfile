@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-MAINTAINER JG <julien@mangue.eu>
+MAINTAINER Ivan Lisenkov <ivan@ivlis.com>
 
 RUN apk add --no-cache \
     curl \
@@ -8,7 +8,7 @@ RUN apk add --no-cache \
     openssh-client \
     rsync
 
-ENV VERSION 0.49.2
+ENV VERSION 0.50
 RUN mkdir -p /usr/local/src \
     && cd /usr/local/src \
     && curl -L https://github.com/gohugoio/hugo/releases/download/v${VERSION}/hugo_${VERSION}_linux-64bit.tar.gz | tar -xz \
